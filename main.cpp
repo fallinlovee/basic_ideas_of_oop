@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 #include <conio.h>
+#include <cmath>
+#define M_PI 3.14159265358979323846264338327950288
 
 class Point {
 public:
@@ -204,6 +206,7 @@ void deleteUserData(std::vector<UserData>& userDataList) {
         std::cout << "Invalid index! UserData does not exist at index " << indexToDelete << "." << std::endl << std::endl;
     }
 }
+
 // Function to perform radix sort on UserData entries based on angles
 void radixSortAngles(std::vector<UserData>& userDataList) {
     const int numBits = 16;  // Assuming angles are represented in radians, adjust as needed
@@ -227,6 +230,7 @@ void radixSortAngles(std::vector<UserData>& userDataList) {
         }
     }
 }
+
 void runGeometryProgram() {
     std::vector<UserData> userDataList;
 
@@ -273,3 +277,4 @@ int main() {
     runGeometryProgram();
     return 0;
 }
+
